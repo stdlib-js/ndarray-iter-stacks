@@ -45,14 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-iter-stacks
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import nditerStacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-iter-stacks@esm/index.mjs';
+var nditerStacks = require( '@stdlib/ndarray-iter-stacks' );
 ```
 
 #### nditerStacks( x, dims\[, options] )
@@ -60,8 +78,8 @@ import nditerStacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-iter-sta
 Returns an iterator which iterates over each subarray in a stack of subarrays according to a list of specified stack dimensions.
 
 ```javascript
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
+var array = require( '@stdlib/ndarray-array' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 var x = array( [ [ [ 1, 2 ], [ 3, 4 ] ], [ [ 5, 6 ], [ 7, 8 ] ] ] );
 // returns <ndarray>
@@ -90,8 +108,8 @@ The function accepts the following `options`:
 By default, the iterator returns [`ndarray`][@stdlib/ndarray/ctor] views which are **read-only**. To return writable [views][@stdlib/ndarray/slice], set the `readonly` option to `false`.
 
 ```javascript
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
+var array = require( '@stdlib/ndarray-array' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 var x = array( [ [ [ 1, 2 ], [ 3, 4 ] ], [ [ 5, 6 ], [ 7, 8 ] ] ] );
 // returns <ndarray>
@@ -145,16 +163,11 @@ The returned [iterator][mdn-iterator-protocol] protocol-compliant object has the
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
-import zeroTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zero-to@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
-import nditerStacks from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-iter-stacks@esm/index.mjs';
+```javascript
+var array = require( '@stdlib/ndarray-array' );
+var zeroTo = require( '@stdlib/array-base-zero-to' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var nditerStacks = require( '@stdlib/ndarray-iter-stacks' );
 
 // Define an input array:
 var x = array( zeroTo( 27 ), {
@@ -197,10 +210,6 @@ while ( true ) {
     }
     console.log( ndarray2array( v.value ) );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -242,7 +251,7 @@ while ( true ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -307,19 +316,19 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [mdn-iterator-protocol]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/esm
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice/tree/esm
+[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice
 
 <!-- <related-links> -->
 
-[@stdlib/ndarray/iter/columns]: https://github.com/stdlib-js/ndarray-iter-columns/tree/esm
+[@stdlib/ndarray/iter/columns]: https://github.com/stdlib-js/ndarray-iter-columns
 
-[@stdlib/ndarray/iter/matrices]: https://github.com/stdlib-js/ndarray-iter-matrices/tree/esm
+[@stdlib/ndarray/iter/matrices]: https://github.com/stdlib-js/ndarray-iter-matrices
 
-[@stdlib/ndarray/iter/rows]: https://github.com/stdlib-js/ndarray-iter-rows/tree/esm
+[@stdlib/ndarray/iter/rows]: https://github.com/stdlib-js/ndarray-iter-rows
 
-[@stdlib/ndarray/iter/subarrays]: https://github.com/stdlib-js/ndarray-iter-subarrays/tree/esm
+[@stdlib/ndarray/iter/subarrays]: https://github.com/stdlib-js/ndarray-iter-subarrays
 
 <!-- </related-links> -->
 
