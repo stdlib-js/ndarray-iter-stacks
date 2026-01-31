@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-iter-stacks",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Create an iterator which iterates over each subarray in a stack of subarrays according to a list of specified stack dimensions.",
   "license": "Apache-2.0",
   "author": {
