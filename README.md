@@ -79,7 +79,6 @@ Returns an iterator which iterates over each subarray in a stack of subarrays ac
 
 ```javascript
 var array = require( '@stdlib/ndarray-array' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 var x = array( [ [ [ 1, 2 ], [ 3, 4 ] ], [ [ 5, 6 ], [ 7, 8 ] ] ] );
 // returns <ndarray>
@@ -87,16 +86,10 @@ var x = array( [ [ [ 1, 2 ], [ 3, 4 ] ], [ [ 5, 6 ], [ 7, 8 ] ] ] );
 var iter = nditerStacks( x, [ 1, 2 ] );
 
 var v = iter.next().value;
-// returns <ndarray>
-
-var arr = ndarray2array( v );
-// returns [ [ 1, 2 ], [ 3, 4 ] ]
+// returns <ndarray>[ [ 1, 2 ], [ 3, 4 ] ]
 
 v = iter.next().value;
-// returns <ndarray>
-
-arr = ndarray2array( v );
-// returns [ [ 5, 6 ], [ 7, 8 ] ]
+// returns <ndarray>[ [ 5, 6 ], [ 7, 8 ] ]
 
 // ...
 ```
@@ -109,7 +102,6 @@ By default, the iterator returns [`ndarray`][@stdlib/ndarray/ctor] views which a
 
 ```javascript
 var array = require( '@stdlib/ndarray-array' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 var x = array( [ [ [ 1, 2 ], [ 3, 4 ] ], [ [ 5, 6 ], [ 7, 8 ] ] ] );
 // returns <ndarray>
@@ -119,15 +111,10 @@ var iter = nditerStacks( x, [ 1, 2 ], {
 });
 
 var v = iter.next().value;
-// returns <ndarray>
-
-var arr = ndarray2array( v );
-// returns [ [ 1, 2 ], [ 3, 4 ] ]
+// returns <ndarray>[ [ 1, 2 ], [ 3, 4 ] ]
 
 v.set( 0, 0, 10 );
-
-arr = ndarray2array( v );
-// returns [ [ 10, 2 ], [ 3, 4 ] ]
+// v => <ndarray>[ [ 10, 2 ], [ 3, 4 ] ]
 ```
 
 The returned [iterator][mdn-iterator-protocol] protocol-compliant object has the following properties:

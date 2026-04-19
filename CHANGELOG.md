@@ -2,6 +2,41 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-04-19)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`5e89f8b`](https://github.com/stdlib-js/stdlib/commit/5e89f8b25d48b08a844cbb05f943de3c3121f0d0) - **docs:** improve doctests for ndarray instances in `ndaray/iter/stacks` [(#11539)](https://github.com/stdlib-js/stdlib/pull/11539) _(by Uday Kakade, Athan Reines)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 2 people contributed to this release. Thank you to the following contributors:
+
+-   Athan Reines
+-   Uday Kakade
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.1.1">
 
 ## 0.1.1 (2026-02-08)
